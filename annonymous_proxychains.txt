@@ -1,0 +1,38 @@
+Metasploit
+A hacking framework.
+
+SOCKS
+Socket Secure (SOCKS) is an Internet protocol that exchanges network packets between a client and server through a proxy server. SOCKS5 additionally provides authentication so only authorized users may access a server. Practically, a SOCKS server proxies TCP connections to an arbitrary IP address, and provides a means for UDP packets to be forwarded.
+
+SOCKS performs at Layer 5 of the OSI model (the session layer, an intermediate layer between the presentation layer and the transport layer). SOCKS server accepts incoming client connection on TCP port 1080.
+source: wikipedia
+
+Step01:	Adding proxys in proxy chain.conf
+//root user//
+
+#nano /etc/proxychanins.conf
+
+//activate 'dynamic_chain' by bringing a '#' in front of that and deactivate 'Strict_chain'//
+
+//add proxies, find the list of proxies in bottom//
+
+socks5	127.0.0.1	9050
+
+//default loopback (127.0.0.1) is used in order to make sure that the IP protocol setup correctly even though they do not have internet activity//
+
+//search proxies from the internet, it is easy to get free proxies over internet and add below the proxy list//
+
+socks5	ip_address	port
+
+//save and exit//
+
+Step02:	Go anonymous
+//in terminal type it//
+
+#service tor status			//to check tor status//
+#service tor start			//to start tor service//
+#service tor stop			//to stop tor service//
+#proxychains firefox www.duckduckgo.com
+
+//search for dnsleaktest, it will show the annonymus ip address which is added to proxy list//
+
