@@ -21,7 +21,7 @@
 
 //change the default ip from the service provider//
 #nano /etc/resolv.conf
-//make the deafult ip as comment '#' and add these IP address 208.67.222.220 and 208.67.222.222; source: www.opendns.com//
+//make the deafult ip as comment '#' and add these IP address 208.67.220.220 and 208.67.222.222; source: www.opendns.com//
 //save and exit but do not restart the network-manager, then it will preload the file once again.//
 //now browse the internet anonymously and check the ip from www.dnsleaktest.com. it will show the proxy ip which you have configured.//
 
