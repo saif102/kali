@@ -1,0 +1,21 @@
+//listing the ethernet/ wan hardware//
+#ifconfig eth0 | grep HWaddr //or use ether//
+
+#macchanger --help
+#macchanger -r wlan0 //it will change random mac list//
+
+#crontab --help
+#crontab -e //edit crontab//
+@reboot macchanger -r eth0 		//to automate macchange on every boot edit these lines in the bottom// 
+:wq								//w=write; q=quit//
+
+Problem on changing mac? Follow this:
+#service NetworkManager stop
+#ifconfig wlan0 down
+#macchanger -r wlan0
+#ifconfig wlan0 down
+#service NetworkManager start
+
+If the problem persists, remove macchanger and reinstall it:
+#apt-get remove macchanger -y
+#apt-get install macchanger fern-wifi-cracker Kali-linux-full -y
