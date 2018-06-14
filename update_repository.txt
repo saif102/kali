@@ -1,0 +1,18 @@
+#apt-get update
+#apt-get upgrade
+
+//apt-get update: updates the list of available packages and their versions but it does not install or upgrade any packages//
+
+//apt-get upgrade: actually installs newer versions of packages the system has. After updating the lists, the package manager knows about available updates for the software installed//
+
+//update the repository file//
+
+#cd /etc/apt
+#nano sources.list
+
+//or//
+
+#leafpad sources.list
+
+//copy the latest repositories from official site and paste into this file, then save and exit. 
+https://docs.kali.org/general-use/kali-linux-sources-list-repositories//
