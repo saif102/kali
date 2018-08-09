@@ -1,0 +1,30 @@
+Configuring Vulnerable Web Apps
+
+Numerous web applications are available actual testing can be performed for training purposes.
+
+Applications include:
+
+Damn Vulnerable Web Applications (DVWA): it is a PHP, MySQL and PHP based app. It needs to be hosted locally.
+
+OWASP WebGoat:J2EE based web application also needs to be hosted locally.
+
+Now let’s begin with hosting an application on a virtual machine. Do the following to set up a web server to host the application:
+
+    Download XAMPP and install.
+    After the installation is complete, click the start button in the control panel to start MySQL and Apache services.
+    Dowload and Extract DVWA and name it as “dvwa.” Go to the folder “C:\xampp\htdocs” and shift the contents folder to a different place.
+    Copy the previously created “dvwa” folder to “C:\xampp\htdocs.”
+    Access http://127.0.0.1/dvwa/login.php from the Address bar.
+
+After these steps, the database setup page will be displayed,
+
+    Access the config folder and open the “config.inc” file through notepad.
+    Look for the value “$_DVWA[ ‘db_password’ ] = ;” and remove its value.
+    Refresh your browser.
+    Enter credentials “admin/password” to log in.
+
+With these steps you have successfully configured your web browser by hosting an application on it. Now the application can be accessed using Kali Linux or BackTrack and practice the attacks.
+
+In the case you are shown the access forbidden page, go to the dvwa folder and open “HTACCESS FILE.” Find the “allow from” line and enter the same IP address used for the Kali Linux Machine here. This will allow you to access the page and you are ready to practice penetration attacks on your virtual machine
+
+When you receive your cloud computing training, you will be taught different methods to create virtual machines and practice different types of known attacks, when you are out in the field, your cloud certification will allow you a significant advantage when it comes to detecting or in a better case preventing penetration attacks.
