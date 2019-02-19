@@ -1,0 +1,13 @@
+// Enable dual boot and make windows OS as default:
+
+// if the windows OS cannot be found:
+
+In kali terminal:
+	- #os-prober			//to list out the operating system
+	- #update-grub
+
+//making windows OS default bootable os:
+	- leaped /etc/default/grub		//or use nano
+	- edit "GRUB_DEFAULT=2"	//0=kali; 1=kali advance; 2=windows
+	- save and exit
+	- #update-grub

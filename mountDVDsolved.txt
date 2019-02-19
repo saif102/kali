@@ -1,0 +1,14 @@
+// if it is not possible to mount the cdrom
+
+Solution01:
+	- Run shell during installation
+	- run this command #blkid 		//it will list the connected devices
+	- #mount -t fat /dev/sdb1 /cdrom
+	- #exit
+	- Then try to mount the cdrom again
+
+Solution02:
+	- Download the Rufus toolkit.
+	 - Write the bootable device as DVD.
+	- Try to install it again.
+	- The system will recognise it as DVD drive.
