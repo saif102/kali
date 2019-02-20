@@ -1,0 +1,21 @@
+Source:
+https://www.youtube.com/watch?v=EOC-jlIasHg
+
+Commands:
+ 
+#apt-get update		//use this command before installing any software
+
+//browse the downloaded folder
+
+#dpkg -i <package name> 
+
+#apt-get install -f 		//if errors massage shows
+
+#leafpad /opt/google/chrome/google-chrome
+
+//find out the same text
+exec -a "$0" "$HERE/chrome" "$0" (// add this )--user-data-dir --no-sandbox
+
+//save and exit
+
+//Done
