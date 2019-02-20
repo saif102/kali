@@ -13,7 +13,7 @@ Problem on changing mac? Follow this:
 #service NetworkManager stop
 #ifconfig wlan0 down
 #macchanger -r wlan0
-#ifconfig wlan0 down
+#ifconfig wlan0 up
 #service NetworkManager start
 
 If the problem persists, remove macchanger and reinstall it:
